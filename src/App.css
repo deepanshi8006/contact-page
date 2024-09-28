@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    margin:0.5rem 4rem;
+    
 }
+.nav .logo{
+    width:5vw;
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+.nav .logo img{
+    width: 100%;
+    height: auto;
+}
+.navigation ul{
+    display:flex;
+    margin:0 20%;
+    justify-content: space-between;
+    font-size: large;
+}
+ul li{
+    list-style: none;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+.contact{
+    margin: 2rem 13.5rem;
+  
+}
+.contact h1{
+    font-size:3rem;
+    margin:-0.4rem 0;
+}
+.contact p{
+    font-size:1rem;
+    font-weight:600;
+    text-transform: uppercase;
+    line-height: 150%;
+    width:88%;
+    color:#4e4848
+}
+.container{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    gap:rem;
+    padding:1rem;
+    margin: 0 6rem;
+    
+}
+.container .form{
+    margin:0rem 6rem;
+  
+}
+.container .service{
+    margin: 0 rem;
+}
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "button1 button2"
+      "button3 button3";
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+Button:nth-child(1) {
+    grid-area: button1;
   }
-  to {
-    transform: rotate(360deg);
+  
+Button:nth-child(2) {
+    grid-area: button2;
   }
-}
+  
+Button:nth-child(3) {
+    grid-area: button3;
+  }
+Button svg {
+    font-size: 20px; 
+  }
+.input-container {
+    position: relative;
+    width:24rem;
+    margin:0 1rem;
+  }
+  
+  .input-container input, #text {
+    margin:1rem 1rem;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  #text{
+    height:6rem;
+  }
+  
+  .input-container label {
+    background: white;
+    margin:1rem 1rem;
+    position: absolute;
+    top: -9px;
+    left: 13px;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .input-container input:focus + label {
+    color: #333;
+    font-weight: 600;
+  }
+  /* .submit{
+    position:relative;
+    top:-1rem;
+    left:14rem;
+    width:12rem
+  } */
